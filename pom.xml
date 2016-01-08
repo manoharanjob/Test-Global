@@ -1,1 +1,67 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>maven.test.app</groupId>
+	<artifactId>Test-globals</artifactId>
+	<packaging>pom</packaging>
+	<name>Test</name>
+	<description>
+		Test rules
+	</description>
+	<version>TEST-SNAPSHOT</version>
+	<url>http://localhost:8080/Test/</url>
+	
+	<modules>
+		<module>Test-Dao</module>
+		<module>Test-Web</module>
+		<module>Test-Ear</module>
+	</modules>
+	<!-- <organization>
+		<name>Mano</name>
+		<url></url>
+	</organization>-->	
+	<properties>
+	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>maven.test.app</groupId>
+				<artifactId>test-dao</artifactId>
+				<version>${project.version}</version>
+				<type>jar</type>
+			</dependency>
+			<dependency>
+				<groupId>maven.test.app</groupId>
+				<artifactId>test-web</artifactId>
+				<version>${project.version}</version>
+				<type>war</type>
+			</dependency>
+			<dependency>
+				<groupId>mave.test.app</groupId>
+				<artifactId>test-ear</artifactId>
+				<version>${project.version}</version>
+				<type>ear</type>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>	
+	<mailingLists>
+	    <mailingList>
+	    	<name>Email</name>
+	      	<post>mano@gmail.com</post>
+	    </mailingList>
+  	</mailingLists>
+	<!-- <issueManagement>
+		<system>Jira</system>
+		<url></url>
+	</issueManagement>-->
+	<!-- <ciManagement>
+		<system>TeamCity</system>
+		<url></url>
+	</ciManagement>-->
+	<!-- <scm>
+		<connection></connection>
+		<url></url>
+		<tag></tag>
+	</scm>-->
+</project>
